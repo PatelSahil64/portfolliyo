@@ -72,6 +72,10 @@ const TiltCard = ({ children, className = '', ...rest }) => {
 function App() {
   const [activeTab, setActiveTab] = useState('Home');
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+=======
+>>>>>>> 234db1d196b2ce5212fa1b3dedc3faeceaad0159
 
   useEffect(() => {
     // Artificial delay for the skeleton loading animation
@@ -207,21 +211,33 @@ function App() {
         <a href="#home" className="logo" onClick={() => scrollTo('home')}>
           &lt;Sahil Patel/&gt;
         </a>
-        <div className="nav-links">
+        
+        <button className="mobile-menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <div className={`hamburger ${isMenuOpen ? 'open' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+
+        <div className={`nav-links ${isMenuOpen ? 'mobile-open' : ''}`}>
           {['Home', 'About', 'Experience', 'Projects', 'Contact'].map((item) => (
             <button
               key={item}
               className={`nav-item ${activeTab === item ? 'active' : ''}`}
-              onClick={() => scrollTo(item.toLowerCase())}
+              onClick={() => {
+                scrollTo(item.toLowerCase());
+                setIsMenuOpen(false);
+              }}
             >
               {item}
             </button>
           ))}
-        </div>
-        <div className="actions">
-          <a href="/Sahil's_Resume.pdf" download className="resume-top">
-            <Download size={16} /> Resume
-          </a>
+          <div className="actions">
+            <a href="/Sahil's_Resume.pdf" download className="resume-top">
+              <Download size={16} /> Resume
+            </a>
+          </div>
         </div>
       </nav>
 
