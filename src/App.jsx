@@ -72,7 +72,8 @@ const TiltCard = ({ children, className = '', ...rest }) => {
 function App() {
   const [activeTab, setActiveTab] = useState('Home');
   const [isLoading, setIsLoading] = useState(true);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     // Artificial delay for the skeleton loading animation
@@ -177,21 +178,21 @@ function App() {
             <div className="skeleton-nav-item skeleton-anim"></div>
             <div className="skeleton-nav-item skeleton-anim"></div>
           </div>
-          <div className="skeleton-logo skeleton-anim" style={{width: '120px', borderRadius: '50px'}}></div>
+          <div className="skeleton-logo skeleton-anim" style={{ width: '120px', borderRadius: '50px' }}></div>
         </div>
-        
+
         <div className="skeleton-container">
           <div className="skeleton-hero">
             <div className="skeleton-hero-content">
-              <div className="skeleton-text skeleton-anim" style={{width: '30%', height: '40px', borderRadius: '50px', marginBottom: '1rem'}}></div>
+              <div className="skeleton-text skeleton-anim" style={{ width: '30%', height: '40px', borderRadius: '50px', marginBottom: '1rem' }}></div>
               <div className="skeleton-title skeleton-anim"></div>
               <div className="skeleton-text skeleton-anim"></div>
               <div className="skeleton-desc skeleton-anim"></div>
-              <div className="skeleton-text skeleton-anim" style={{width: '160px', height: '55px', borderRadius: '50px', marginTop: '1.5rem'}}></div>
+              <div className="skeleton-text skeleton-anim" style={{ width: '160px', height: '55px', borderRadius: '50px', marginTop: '1.5rem' }}></div>
             </div>
             <div className="skeleton-image skeleton-anim"></div>
           </div>
-          
+
           <div className="skeleton-cards">
             {[1, 2, 3, 4, 5, 6].map(i => (
               <div key={i} className="skeleton-card skeleton-anim"></div>
@@ -208,7 +209,7 @@ function App() {
         <a href="#home" className="logo" onClick={() => scrollTo('home')}>
           &lt;Sahil Patel/&gt;
         </a>
-        
+
         <button className="mobile-menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <div className={`hamburger ${isMenuOpen ? 'open' : ''}`}>
             <span></span>
