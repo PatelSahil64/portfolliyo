@@ -275,7 +275,7 @@ function App() {
                   <a href="https://github.com/PatelSahil64" target="_blank" rel="noreferrer" className="unique-social-icon">
                     <FaGithub size={24} />
                   </a>
-                  <a href="mailto:sahilpatel1341@gmail.com" className="unique-social-icon">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahilpatel1341@gmail.com" target="_blank" rel="noreferrer" className="unique-social-icon">
                     <FaEnvelope size={24} />
                   </a>
                 </div>
@@ -363,7 +363,7 @@ function App() {
           <div className="contact-block">
             <h2>Connect with me</h2>
             <p>I am always open to discussing new engineering opportunities, web solutions, or collaborations.</p>
-            <a href="mailto:sahilpatel1341@gmail.com" className="contact-email">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahilpatel1341@gmail.com" target="_blank" rel="noreferrer" className="contact-email">
               sahilpatel1341@gmail.com
             </a>
           </div>
